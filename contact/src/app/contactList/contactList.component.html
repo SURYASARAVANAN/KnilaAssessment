@@ -1,0 +1,47 @@
+<div class="contactSection">
+<h2>Contact List</h2>
+<button style="bottom: 10px; position: relative;" class="btn btn-warning" (click)="openCreateContact()">Create</button>
+<table id="contactTable" class="table table-bordered table-striped" >
+    <thead>
+      <tr>
+        <th>SNo</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>PostalCode</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let contact of contactList; let i = index;">
+      <tr>
+        <td>{{i+1}}</td>
+        <td>{{contact.firstName}}</td>
+        <td>{{contact.lastName}}</td>
+        <td>{{contact.phoneNumber}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.address}}</td>
+        <td>{{contact.city}}</td>
+        <td>{{contact.state}}</td>
+        <td>{{contact.country}}</td>
+        <td>{{contact.postalCode}}</td>
+        <td>
+          <div class="btn-group">
+            <i class="btn btn-primary" (click)="openUpdateContact(contact.id)">Edit</i>
+            <i class="btn btn-danger" (click)="deleteContact(contact.id)">Delete</i>
+          </div>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $(document).ready(function () {
+      $('#contactTable').DataTable({"order": [[2, "asc"]]});
+  });
+</script>

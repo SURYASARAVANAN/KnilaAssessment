@@ -1,0 +1,24 @@
+
+.header{
+    background-color: rgb(12, 226, 226);
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 20px 0px 20px;
+    width:100%;
+}
+.headerItems{
+    flex-direction: row;
+    display: flex;
+}
+.navElement{
+    font-size: medium;
+    padding: 15px 20px 20px 20px;
+    font-style: italic;
+}
+.footer{
+    background-color: rgb(12, 226, 226);
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 20px 0px 20px;
+    width:100%;
+}

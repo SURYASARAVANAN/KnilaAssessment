@@ -1,0 +1,44 @@
+<div class="dialog-content">
+    <h2>Edit Contact</h2>
+    <form [formGroup]="contactForm" >
+        <div style="padding:10px;">
+          <label for="firstName">First Name</label>
+          <input class="form-control" type="text" id="firstName" formControlName="firstName">
+        </div>
+        <div style="padding:10px;">
+            <label for="last">Last Name</label>
+            <input class="form-control" type="text" id="lastName" formControlName="lastName">  
+        </div>
+        
+        <div style="padding:10px;">
+            <label for="phone">Phone Number</label>
+            <input class="form-control" type="tel" id="phoneNumber" formControlName="phoneNumber">  
+        </div>
+        <div style="padding:10px;">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" id="email" formControlName="email">  
+        </div>
+        <div style="padding:10px;">
+            <label for="address">Address</label>
+            <input class="form-control" type="text" id="address" formControlName="address">  
+        </div>
+        <div style="padding:10px;">
+            <label for="city">City</label>
+            <input class="form-control" type="text" id="city" formControlName="city">  
+        </div>
+        <div style="padding:10px;">
+            <label for="state">State</label>
+            <input class="form-control" type="text" id="state" formControlName="state">  
+        </div>
+        <div style="padding:10px;">
+            <label for="country">Country</label>
+            <input class="form-control"  type="text" id="country" formControlName="country">  
+        </div>
+        <div style="padding:10px;">
+            <label for="postalCode">Postal Code</label>
+            <input class="form-control"  type="text" id="postalCode" formControlName="postalCode">  
+        </div>
+        <button class="btn btn-success" type="button" style="margin-right:10px" (click)="onSubmit()">Update</button>
+        <button class="btn btn-warning" type="button" (click)="close('cancel')">Close</button>
+      </form>
+<div>
